@@ -94,7 +94,7 @@
         "template": "video-carousel",
         "props": {
             "id": "showcase",
-            "title": "Dataset Samples & Download(Coming soon)",
+            "title": "More Detail(Coming soon)",
             "items": [],
             "count": 1
         }
