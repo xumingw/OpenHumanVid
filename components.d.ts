@@ -7,7 +7,11 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AbstractSection: typeof import('./src/components/AbstractSection.vue')['default']
     ACarousel: typeof import('ant-design-vue/es')['Carousel']
+    AModal: typeof import('ant-design-vue/es')['Modal']
+    BibTeX: typeof import('./src/components/BibTeX.vue')['default']
+    FrameworkSection: typeof import('./src/components/FrameworkSection.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
@@ -16,7 +20,14 @@ declare module 'vue' {
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SingleVideo: typeof import('./src/components/SingleVideo.vue')['default']
+    TextVideo: typeof import('./src/components/TextVideo.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
+    TitleSection: typeof import('./src/components/TitleSection.vue')['default']
+    VideoCarousel: typeof import('./src/components/VideoCarousel.vue')['default']
+    VideoComparision: typeof import('./src/components/VideoComparision.vue')['default']
+    VideoGrid: typeof import('./src/components/VideoGrid.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
+    WrappedSection: typeof import('./src/components/WrappedSection.vue')['default']
   }
 }

@@ -95,7 +95,286 @@
         "props": {
             "id": "showcase",
             "title": "More Detail(Coming soon)",
-            "items": [],
+            "items": [
+                "https://cdn.aondata.work/OpenHumanVid/assets/videos/main.mp4",
+                "https://cdn.aondata.work/OpenHumanVid/assets/videos/main.mp4",
+                "https://cdn.aondata.work/OpenHumanVid/assets/videos/main.mp4"
+            ],
+            "annotations": [
+                {
+                    "Captions": {
+                        "clip_id": "xxxx",
+                        "method": "structured_caption",
+                        "feature": {
+                            "long_caption": "A man in a dark suit and blue plaid shirt stands in a room with classical architecture, including tall windows and a grand staircase, and speaks earnestly to the camera. The room is well-lit by natural light, and elegant wall sconces. The man's serious expression and the room's historical significance are consistent throughout the video.",
+                            "short_caption": "A man in a dark suit descends a modern staircase, engaged in a phone conversation, showing concern, in a contemporary indoor environment with signs and a security camera.",
+                            "appearance_caption": "A man in a dark suit and black shirt.",
+                            "humanmotion_caption": "descending.",
+                            "facemotion_caption": "Focused concern.",
+                            "environment_caption": "Contemporary indoor environment, possibly a corporate or public building, with signs indicating directions and a security camera."
+                        }
+                    },
+                    "Luminance": {
+                        "clip_id": "xxxx",
+                        "method": "luminance",
+                        "feature": {
+                            "luminance_min": 10.0,
+                            "luminance_max": 50.0,
+                            "luminance_mean": 32.0
+                        }
+                    },
+                    "Blur": {
+                        "clip_id": "xxxx",
+                        "method": "blur",
+                        "feature": {
+                            "blur_min": 10.0,
+                            "blur_max": 50.0,
+                            "blur_mean": 32.0
+                        }
+                    },
+                    "Aesthetics": {
+                        "clip_id": "xxxx",
+                        "method": "aes_score",
+                        "feature": {
+                            "score": 10.0
+                        }
+                    },
+                    "Technical Quality": {
+                        "clip_id": "xxxx",
+                        "method": "DOVER",
+                        "feature": {
+                            "overall_score": 0.1473659345394132,
+                            "aesthetic_score": 0.7640544944986749,
+                            "technical_score": 0.025936384949948224
+                        }
+                    },
+                    "Motion": {
+                        "clip_id": "xxxx",
+                        "method": "motion_score",
+                        "feature": {
+                            "local_score": 84.14994812011719,
+                            "global_score": 4.1278228759765625
+                        }
+                    },
+                    "Human": {
+                        "clip_id": "xxxx",
+                        "method": "human",
+                        "feature": {
+                            "face_infos": [
+                                {
+                                    "bbox": [
+                                        0.21723240039966724,
+                                        0.06925696267022027,
+                                        0.5666032014069734,
+                                        0.7887318929036459
+                                    ],
+                                    "pose": [
+                                        -19.083486557006836,
+                                        12.245366096496582,
+                                        -30.575132369995117
+                                    ]
+                                }
+                            ],
+                            "face_ratio": 0.7194749302334256,
+                            "max_human_num": 1,
+                            "average_human_num": 1.0,
+                            "first_frame_human_num": 1,
+                            "average_human_num_change": 0.0
+                        }
+                    },
+                    "Lip Sync": {
+                        "clip_id": "xxxx",
+                        "method": "syncnet",
+                        "feature": {
+                            "conf": 0.5223512649536133,
+                            "dist": 11.353439331054688,
+                            "offset": 15.0
+                        }
+                    }
+                },
+                {
+                    "Captions": {
+                        "clip_id": "xxxx",
+                        "method": "structured_caption",
+                        "feature": {
+                            "long_caption": "xxxxx",
+                            "short_caption": "xxxx",
+                            "appearance_caption": "xxxx",
+                            "humanmotion_caption": "xxxx",
+                            "facemotion_caption": "xxxx",
+                            "environment_caption": "xxx"
+                        }
+                    },
+                    "Luminance": {
+                        "clip_id": "xxxx",
+                        "method": "luminance",
+                        "feature": {
+                            "luminance_min": 10.0,
+                            "luminance_max": 50.0,
+                            "luminance_mean": 32.0
+                        }
+                    },
+                    "Blur": {
+                        "clip_id": "xxxx",
+                        "method": "blur",
+                        "feature": {
+                            "blur_min": 10.0,
+                            "blur_max": 50.0,
+                            "blur_mean": 32.0
+                        }
+                    },
+                    "Aesthetics": {
+                        "clip_id": "xxxx",
+                        "method": "aes_score",
+                        "feature": {
+                            "score": 10.0
+                        }
+                    },
+                    "Technical Quality": {
+                        "clip_id": "xxxx",
+                        "method": "DOVER",
+                        "feature": {
+                            "overall_score": 0.1473659345394132,
+                            "aesthetic_score": 0.7640544944986749,
+                            "technical_score": 0.025936384949948224
+                        }
+                    },
+                    "Motion": {
+                        "clip_id": "xxxx",
+                        "method": "motion_score",
+                        "feature": {
+                            "local_score": 84.14994812011719,
+                            "global_score": 4.1278228759765625
+                        }
+                    },
+                    "Human": {
+                        "clip_id": "xxxx",
+                        "method": "human",
+                        "feature": {
+                            "face_infos": [
+                                {
+                                    "bbox": [
+                                        0.21723240039966724,
+                                        0.06925696267022027,
+                                        0.5666032014069734,
+                                        0.7887318929036459
+                                    ],
+                                    "pose": [
+                                        -19.083486557006836,
+                                        12.245366096496582,
+                                        -30.575132369995117
+                                    ]
+                                }
+                            ],
+                            "face_ratio": 0.7194749302334256,
+                            "max_human_num": 1,
+                            "average_human_num": 1.0,
+                            "first_frame_human_num": 1,
+                            "average_human_num_change": 0.0
+                        }
+                    },
+                    "Lip Sync": {
+                        "clip_id": "xxxx",
+                        "method": "syncnet",
+                        "feature": {
+                            "conf": 0.5223512649536133,
+                            "dist": 11.353439331054688,
+                            "offset": 15.0
+                        }
+                    }
+                },
+                {
+                    "Captions": {
+                        "clip_id": "xxxx",
+                        "method": "structured_caption",
+                        "feature": {
+                            "long_caption": "xxxxx",
+                            "short_caption": "xxxx",
+                            "appearance_caption": "xxxx",
+                            "humanmotion_caption": "xxxx",
+                            "facemotion_caption": "xxxx",
+                            "environment_caption": "xxx"
+                        }
+                    },
+                    "Luminance": {
+                        "clip_id": "xxxx",
+                        "method": "luminance",
+                        "feature": {
+                            "luminance_min": 10.0,
+                            "luminance_max": 50.0,
+                            "luminance_mean": 32.0
+                        }
+                    },
+                    "Blur": {
+                        "clip_id": "xxxx",
+                        "method": "blur",
+                        "feature": {
+                            "blur_min": 10.0,
+                            "blur_max": 50.0,
+                            "blur_mean": 32.0
+                        }
+                    },
+                    "Aesthetics": {
+                        "clip_id": "xxxx",
+                        "method": "aes_score",
+                        "feature": {
+                            "score": 10.0
+                        }
+                    },
+                    "Technical Quality": {
+                        "clip_id": "xxxx",
+                        "method": "DOVER",
+                        "feature": {
+                            "overall_score": 0.1473659345394132,
+                            "aesthetic_score": 0.7640544944986749,
+                            "technical_score": 0.025936384949948224
+                        }
+                    },
+                    "Motion": {
+                        "clip_id": "xxxx",
+                        "method": "motion_score",
+                        "feature": {
+                            "local_score": 84.14994812011719,
+                            "global_score": 4.1278228759765625
+                        }
+                    },
+                    "Human": {
+                        "clip_id": "xxxx",
+                        "method": "human",
+                        "feature": {
+                            "face_infos": [
+                                {
+                                    "bbox": [
+                                        0.21723240039966724,
+                                        0.06925696267022027,
+                                        0.5666032014069734,
+                                        0.7887318929036459
+                                    ],
+                                    "pose": [
+                                        -19.083486557006836,
+                                        12.245366096496582,
+                                        -30.575132369995117
+                                    ]
+                                }
+                            ],
+                            "face_ratio": 0.7194749302334256,
+                            "max_human_num": 1,
+                            "average_human_num": 1.0,
+                            "first_frame_human_num": 1,
+                            "average_human_num_change": 0.0
+                        }
+                    },
+                    "Lip Sync": {
+                        "clip_id": "xxxx",
+                        "method": "syncnet",
+                        "feature": {
+                            "conf": 0.5223512649536133,
+                            "dist": 11.353439331054688,
+                            "offset": 15.0
+                        }
+                    }
+                }
+            ],
             "count": 1
         }
     },

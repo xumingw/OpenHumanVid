@@ -8,7 +8,6 @@ export function inVisible(video: HTMLElement) {
   return false
 }
 
-
 export function detachVideo(video: HTMLVideoElement) {
   const src = video.src
   video.src = ''
@@ -22,3 +21,7 @@ export function attachVideo(video: HTMLVideoElement) {
   video.removeAttribute('data-src')
 }
 
+export function playVideo(video: HTMLVideoElement) {
+  video.muted = true
+  video.play()
+}

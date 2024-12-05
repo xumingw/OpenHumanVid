@@ -11,9 +11,19 @@
                         :class="{ hidden: i > 0 }"
                         class="video-group relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                         data-twe-carousel-item style="backface-visibility: hidden">
-                        <video v-for="(video, vi) in videos" :key="vi" :ref="(el: any) => videos[i + vi] = el" v-lazy
-                            controls :src="video" preload="metadata"
-                            :style="{ width: `${100 / videos.length - 1}%`, 'margin-right': `1%` }"></video>
+                        <div v-for="(video, vi) in videos" :key="vi"
+                            :style="{ width: `${100 / videos.length - 1}%`, 'margin-right': `1%`, 'position': 'relative' }"
+                            @mouseenter="hideCaption" @mouseleave="showCaption">
+                            <div v-if="captions[vi]" class="caption">
+                                <span>
+                                    {{ captions[vi] }}
+                                </span>
+                            </div>
+                            <video :ref="(el: any) => videos[i + vi] = el" :muted="Boolean(captions[vi])"
+                                :style="{ 'cursor': 'pointer' }" :loop="Boolean(captions[vi])"
+                                :autoplay="Boolean(captions[vi])" :controls="!Boolean(captions[vi])" :src="video"
+                                preload="metadata" @click="showModal"></video>
+                        </div>
                     </div>
                 </div>
 
@@ -61,11 +71,15 @@ interface Props {
     id?: string
     title?: string
     items?: string[]
+    captions?: string[]
+    annotations?: { [key: string]: { clip_id: string, method: string, feature: any } }[]
     count?: number
 }
 const { props } = defineProps<{ props: Props }>()
 const title = props.title || ''
 const items = (props.items || []).map(sub => sub.startsWith("assets") ? new URL(`../${sub}`, import.meta.url).href : sub)
+const annotations = props.annotations || []
+const captions = annotations.map(v => v["Captions"]?.feature["long_caption"])
 const count = (props.count || 1)
 const id = props.id || title.replaceAll(" ", "")
 
@@ -78,13 +92,29 @@ for (let i = 0; i < items.length; i++) {
 
 import { ref, onMounted } from 'vue';
 import { initTWE, Carousel } from 'tw-elements';
-import { attachVideo, inVisible } from '@/utils/video';
+import { attachVideo, inVisible, playVideo } from '@/utils/video';
 import { store } from '@/store'
 
 const carouselElement = ref<HTMLElement>();
 const videos = ref<HTMLVideoElement[]>([]);
 const carouselItems = ref<HTMLElement[]>([]);
 const carouselIndicators = ref<HTMLElement[]>([]);
+
+function hideCaption(evt: MouseEvent) {
+    const containerEle = evt.target as HTMLElement
+    const element: HTMLElement = containerEle.querySelector(".caption")!
+    if (element) {
+        element.style.display = "none"
+    }
+}
+
+function showCaption(evt: MouseEvent) {
+    const containerEle = evt.target as HTMLElement
+    const element: HTMLElement = containerEle.querySelector(".caption")!
+    if (element) {
+        element.style.display = "flex"
+    }
+}
 
 onMounted(async () => {
     carouselItems.value[0]?.setAttribute("data-twe-carousel-active", "")
@@ -129,8 +159,22 @@ section {
 }
 
 .video-group {
+    .caption {
+        @apply w-full h-full px-1;
+        white-space: pre-line;
+        word-break: break-word;
+        text-overflow: ellipsis;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5%;
+        z-index: 999;
+    }
+
     video {
-        width: 49%;
+        // width: 49%;
         @apply rounded-lg;
     }
 
