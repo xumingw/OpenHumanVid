@@ -32,7 +32,7 @@ export default {
         if (inVisible(el)) {
           attachVideo(el)
         } else {
-          detachVideo(el)
+          // detachVideo(el)
         }
         el.oncanplay = () => {
           videos.set(el, el.getBoundingClientRect())

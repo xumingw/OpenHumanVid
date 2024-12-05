@@ -103,7 +103,6 @@
             "annotations": [
                 {
                     "Captions": {
-                        "clip_id": "xxxx",
                         "method": "structured_caption",
                         "feature": {
                             "long_caption": "A man in a dark suit and blue plaid shirt stands in a room with classical architecture, including tall windows and a grand staircase, and speaks earnestly to the camera. The room is well-lit by natural light, and elegant wall sconces. The man's serious expression and the room's historical significance are consistent throughout the video.",
@@ -115,7 +114,6 @@
                         }
                     },
                     "Luminance": {
-                        "clip_id": "xxxx",
                         "method": "luminance",
                         "feature": {
                             "luminance_min": 10.0,
@@ -124,7 +122,6 @@
                         }
                     },
                     "Blur": {
-                        "clip_id": "xxxx",
                         "method": "blur",
                         "feature": {
                             "blur_min": 10.0,
@@ -133,14 +130,12 @@
                         }
                     },
                     "Aesthetics": {
-                        "clip_id": "xxxx",
                         "method": "aes_score",
                         "feature": {
                             "score": 10.0
                         }
                     },
                     "Technical Quality": {
-                        "clip_id": "xxxx",
                         "method": "DOVER",
                         "feature": {
                             "overall_score": 0.1473659345394132,
@@ -149,7 +144,6 @@
                         }
                     },
                     "Motion": {
-                        "clip_id": "xxxx",
                         "method": "motion_score",
                         "feature": {
                             "local_score": 84.14994812011719,
@@ -157,7 +151,6 @@
                         }
                     },
                     "Human": {
-                        "clip_id": "xxxx",
                         "method": "human",
                         "feature": {
                             "face_infos": [
@@ -183,7 +176,6 @@
                         }
                     },
                     "Lip Sync": {
-                        "clip_id": "xxxx",
                         "method": "syncnet",
                         "feature": {
                             "conf": 0.5223512649536133,
@@ -194,7 +186,6 @@
                 },
                 {
                     "Captions": {
-                        "clip_id": "xxxx",
                         "method": "structured_caption",
                         "feature": {
                             "long_caption": "xxxxx",
@@ -206,7 +197,6 @@
                         }
                     },
                     "Luminance": {
-                        "clip_id": "xxxx",
                         "method": "luminance",
                         "feature": {
                             "luminance_min": 10.0,
@@ -215,7 +205,6 @@
                         }
                     },
                     "Blur": {
-                        "clip_id": "xxxx",
                         "method": "blur",
                         "feature": {
                             "blur_min": 10.0,
@@ -224,14 +213,12 @@
                         }
                     },
                     "Aesthetics": {
-                        "clip_id": "xxxx",
                         "method": "aes_score",
                         "feature": {
                             "score": 10.0
                         }
                     },
                     "Technical Quality": {
-                        "clip_id": "xxxx",
                         "method": "DOVER",
                         "feature": {
                             "overall_score": 0.1473659345394132,
@@ -240,7 +227,6 @@
                         }
                     },
                     "Motion": {
-                        "clip_id": "xxxx",
                         "method": "motion_score",
                         "feature": {
                             "local_score": 84.14994812011719,
@@ -248,7 +234,6 @@
                         }
                     },
                     "Human": {
-                        "clip_id": "xxxx",
                         "method": "human",
                         "feature": {
                             "face_infos": [
@@ -274,7 +259,6 @@
                         }
                     },
                     "Lip Sync": {
-                        "clip_id": "xxxx",
                         "method": "syncnet",
                         "feature": {
                             "conf": 0.5223512649536133,
@@ -285,8 +269,7 @@
                 },
                 {
                     "Captions": {
-                        "clip_id": "xxxx",
-                        "method": "structured_caption",
+                        "method": "caption",
                         "feature": {
                             "long_caption": "xxxxx",
                             "short_caption": "xxxx",
@@ -375,7 +358,7 @@
                     }
                 }
             ],
-            "count": 1
+            "count": 2
         }
     },
     {

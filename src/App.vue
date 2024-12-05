@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import ModalContainer from '@/components/ModalContainer.vue'
 </script>
 
 <template>
   <RouterView></RouterView>
+  <ModalContainer />
 </template>
 
 <style scoped>

@@ -13,7 +13,7 @@
                         data-twe-carousel-item style="backface-visibility: hidden">
                         <div v-for="(video, vi) in videos" :key="vi"
                             :style="{ width: `${100 / videos.length - 1}%`, 'margin-right': `1%`, 'position': 'relative' }"
-                            @mouseenter="hideCaption" @mouseleave="showCaption">
+                            @mouseenter.capture.stop="hideCaption" @mouseleave.capture.stop="showCaption">
                             <div v-if="captions[vi]" class="caption">
                                 <span>
                                     {{ captions[vi] }}
@@ -22,7 +22,7 @@
                             <video :ref="(el: any) => videos[i + vi] = el" :muted="Boolean(captions[vi])"
                                 :style="{ 'cursor': 'pointer' }" :loop="Boolean(captions[vi])"
                                 :autoplay="Boolean(captions[vi])" :controls="!Boolean(captions[vi])" :src="video"
-                                preload="metadata" @click="showModal"></video>
+                                preload="metadata" @click="(evt) => showFeature(vi, evt)"></video>
                         </div>
                     </div>
                 </div>
@@ -116,6 +116,15 @@ function showCaption(evt: MouseEvent) {
     }
 }
 
+function showFeature(index: number, evt: MouseEvent) {
+    if (annotations.length > index) {
+        const annotation = annotations[index]
+        store.annotations = annotation
+        store.modalOpen = true
+    }
+    store.video = (evt.target as HTMLVideoElement).src
+}
+
 onMounted(async () => {
     carouselItems.value[0]?.setAttribute("data-twe-carousel-active", "")
     carouselIndicators.value[0]?.setAttribute("data-twe-carousel-active", "")
@@ -160,7 +169,7 @@ section {
 
 .video-group {
     .caption {
-        @apply w-full h-full px-1;
+        @apply w-full h-full px-1 text-white;
         white-space: pre-line;
         word-break: break-word;
         text-overflow: ellipsis;
@@ -170,7 +179,7 @@ section {
         justify-content: center;
         align-items: center;
         padding: 0 5%;
-        z-index: 999;
+        z-index: 99;
     }
 
     video {
