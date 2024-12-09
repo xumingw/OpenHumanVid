@@ -1,7 +1,7 @@
 <template>
     <section class="abstract">
         <div>
-            <h3>Abstract</h3>
+            <h3>{{ title }}</h3>
             <div v-if="figure" class="figure">
                 <img :src="figure">
             </div>
@@ -15,11 +15,13 @@
 
 <script setup lang="ts">
 interface Props {
+    title?: string
     content?: string
     figure?: string
     video?: string
 }
 const { props } = defineProps<{ props: Props }>()
+const title = props.title || "Abstract"
 const figure = (props.figure || "").startsWith("assets") ? new URL(`../${props.figure}`, import.meta.url).href : props.figure
 const video = (props.video || "").startsWith("assets") ? new URL(`../${props.video}`, import.meta.url).href : props.video
 

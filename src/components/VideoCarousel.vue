@@ -14,15 +14,17 @@
                         <div v-for="(video, vi) in videos" :key="vi"
                             :style="{ width: `${100 / videos.length - 1}%`, 'margin-right': `1%`, 'position': 'relative' }"
                             @mouseenter.capture.stop="hideCaption" @mouseleave.capture.stop="showCaption">
-                            <div v-if="captions[vi]" class="caption">
+                            <div v-if="captions[(i * count) + vi]" class="caption">
                                 <span>
-                                    {{ captions[vi] }}
+                                    {{ captions[(i * count) + vi] }}
                                 </span>
                             </div>
-                            <video :ref="(el: any) => videos[i + vi] = el" :muted="Boolean(captions[vi])"
-                                :style="{ 'cursor': 'pointer' }" :loop="Boolean(captions[vi])"
-                                :autoplay="Boolean(captions[vi])" :controls="!Boolean(captions[vi])" :src="video"
-                                preload="metadata" @click="(evt) => showFeature(vi, evt)"></video>
+                            <video :ref="(el: any) => videos[(i * count) + vi] = el"
+                                :muted="Boolean(captions[(i * count) + vi])" :style="{ 'cursor': 'pointer' }"
+                                :loop="Boolean(captions[(i * count) + vi])"
+                                :autoplay="Boolean(captions[(i * count) + vi])"
+                                :controls="!Boolean(captions[(i * count) + vi])" :src="video" preload="metadata"
+                                @click="(evt) => showFeature((i * count) + vi, evt)"></video>
                         </div>
                     </div>
                 </div>
@@ -170,6 +172,7 @@ section {
 .video-group {
     .caption {
         @apply w-full h-full px-1 text-white;
+        opacity: 0.5;
         white-space: pre-line;
         word-break: break-word;
         text-overflow: ellipsis;
