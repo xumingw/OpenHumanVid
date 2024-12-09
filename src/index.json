@@ -343,7 +343,6 @@
                         }
                     },
                     "Lip Sync": {
-                        "clip_id": "xxxx",
                         "method": "syncnet",
                         "feature": {
                             "offset": 2.0,
