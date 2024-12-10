@@ -13,7 +13,7 @@ import sections from '@/index.json';
 
 <style lang="scss">
 main {
-  @apply w-full h-full flex flex-col items-center;
+  @apply w-full h-full flex flex-col items-center bg-white;
 
   >:nth-child(2n-1) {
     // @apply bg-white;

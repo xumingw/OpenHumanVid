@@ -19,6 +19,10 @@ section {
     @apply flex flex-col justify-center items-center;
 }
 
+pre {
+    @apply text-sm
+}
+
 .bibtex-code {
     @apply border-gray-300 bg-gray-300/15 p-4 rounded-lg w-full overflow-auto;
     max-width: 960px;

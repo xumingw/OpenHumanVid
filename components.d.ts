@@ -30,6 +30,7 @@ declare module 'vue' {
     VideoCarousel: typeof import('./src/components/VideoCarousel.vue')['default']
     VideoComparision: typeof import('./src/components/VideoComparision.vue')['default']
     VideoGrid: typeof import('./src/components/VideoGrid.vue')['default']
+    VideoPanel: typeof import('./src/components/VideoPanel.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
     WrappedSection: typeof import('./src/components/WrappedSection.vue')['default']
   }

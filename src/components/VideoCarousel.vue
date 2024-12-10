@@ -187,7 +187,7 @@ section {
 
     video {
         // width: 49%;
-        @apply rounded-lg;
+        // @apply rounded-lg;
     }
 
     @media (max-width: 768px) {

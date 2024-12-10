@@ -73,13 +73,13 @@ onMounted(() => {
 .title {
 
     .authors {
-        @apply text-center text-lg;
+        @apply text-center text-base;
 
-        .thin {
-            .author-name {
-                @apply font-light
-            }
-        }
+        // .thin {
+        //     .author-name {
+        //         @apply font-light
+        //     }
+        // }
     }
 
     .res_link {
@@ -88,7 +88,7 @@ onMounted(() => {
 
     video {
         max-width: 960px;
-        @apply mt-4 block w-full;
+        @apply mt-20 block w-full;
     }
 }
 
