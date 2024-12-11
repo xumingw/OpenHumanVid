@@ -7,6 +7,7 @@
     <SingleVideo v-if="template === 'single-video'" :props="props" />
     <VideoCarousel v-if="template === 'video-carousel'" :props="props" />
     <BibTeX v-if="template === 'bibtex'" :props="props" />
+    <ImageStack v-if="template === 'image-stack'" :props="props" />
 </template>
 
 <script setup lang="ts">
@@ -18,6 +19,7 @@ import TextVideo from "@/components/TextVideo.vue"
 import SingleVideo from "@/components/SingleVideo.vue"
 import VideoCarousel from "@/components/VideoCarousel.vue"
 import BibTeX from "@/components/BibTeX.vue"
+import ImageStack from "@/components/ImageStack.vue"
 interface Props {
     template?: string,
     props?: any,

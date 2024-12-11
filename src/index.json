@@ -731,19 +731,18 @@
     }
   },
   {
-    "template": "abstract",
+    "template": "image-stack",
     "props": {
-      "title": "Data Pipeline",
-      "figure": "//cdn.aondata.work/OpenHumanVid/assets/images/datapipeline.jpg",
-      "content": "First, we preprocess the raw videos with decoding, cropping, and segmentation, followed by quality filtering based on luminance, blur, aesthetics, motion, and technical metrics. Then, we extract human skeleton data and speech audio from the video clips. Subsequently, we generate structured captions for the clips using MiniCPM, CogVLM, and Llama, with BLIP2 voting for accuracy. Finally, we apply advanced human quality filtering to align captions with visual details such as appearance, expressions, and poses, ensuring fine-grained alignment between textual information and visual characteristics."
+      "title": "Statistics",
+      "imageList": ["src/figs/word_count_.png", "src/figs/dist1.png", "src/figs/dist2.png"]
     }
   },
   {
     "template": "abstract",
     "props": {
-      "title": "Data Statistics",
-      "figure": "//cdn.aondata.work/OpenHumanVid/assets/images/data_statistics.jpg",
-      "content": ""
+      "title": "Data Pipeline",
+      "figure": "//cdn.aondata.work/OpenHumanVid/assets/images/datapipeline.jpg",
+      "content": "First, we preprocess the raw videos with decoding, cropping, and segmentation, followed by quality filtering based on luminance, blur, aesthetics, motion, and technical metrics. Then, we extract human skeleton data and speech audio from the video clips. Subsequently, we generate structured captions for the clips using MiniCPM, CogVLM, and Llama, with BLIP2 voting for accuracy. Finally, we apply advanced human quality filtering to align captions with visual details such as appearance, expressions, and poses, ensuring fine-grained alignment between textual information and visual characteristics."
     }
   },
   {
