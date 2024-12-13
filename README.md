@@ -26,14 +26,16 @@ OpenHumanVid is a large-scale and high-quality human-centric video dataset chara
 ### Video-Caption Pairs in Panda-70M
   <table class="center">
     <tr>
-      <td width=33.3% style="border: none"><video src="https://cdn.aondata.work/OpenHumanVid/assets/videos/f40492a05b8df569687c735e33c295efce06517630489d06f7f95f68527c4674_010804_010895.mp4"></td>
-      <td width=33.3% style="border: none"><video src="https://cdn.aondata.work/OpenHumanVid/assets/videos/4d092de5f215e4bc41b7c773a77787289e0053f2f7645c5801fd2d907ebac137_016564_016789.mp4"></td>
-      <td width=33.3% style="border: none"><video src="https://cdn.aondata.work/OpenHumanVid/assets/videos/360e7333d4a8302bacfddd6b308606d17342fa23233a72c545fac4fba812ad59_030894_031095.mp4"></td>
+      <td width=25% style="border: none"><img src="assets/f40492a05b8df569687c735e33c295efce06517630489d06f7f95f68527c4674_010804_010895.gif"></td>
+      <td width=25% style="border: none"><img src="assets/4d092de5f215e4bc41b7c773a77787289e0053f2f7645c5801fd2d907ebac137_016564_016789.gif"></td>
+      <td width=25% style="border: none"><img src="assets/360e7333d4a8302bacfddd6b308606d17342fa23233a72c545fac4fba812ad59_030894_031095.gif"></td>
+      <td width=25% style="border: none"><img src="assets/0160098af8984e3b58fd61d3c6c260ccf86e7ae221e8e3b13fc06bdafe597aeb_050277_050376.gif"></td>
     </tr>
     <tr style="text-align: center;">
-      <td width=33.3% style="border: none">A rhino and a lion are fighting in the dirt.</td>
-      <td width=33.3% style="border: none">A person is holding a long haired dachshund in their arms.</td>
-      <td width=33.3% style="border: none">A rocket launches into space on the launch pad.</td>
+      <td width=25% style="border: none">A rhino and a lion are fighting in the dirt.</td>
+      <td width=25% style="border: none">A person is holding a long haired dachshund in their arms.</td>
+      <td width=25% style="border: none">A rocket launches into space on the launch pad.</td>
+      <td width=25% style="border: none">A rocket launches into space on the launch pad.</td>
     </tr>
   </table>
 
