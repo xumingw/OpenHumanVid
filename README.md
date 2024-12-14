@@ -97,8 +97,6 @@ We preprocess raw videos through decoding, cropping, and segmentation, followed 
 |----------|-----------|----------------|--------------|
 | [link](https://forms.gle/moqec5Qod7mz9pfD6) | 13.2M | 16.7 khrs  | ~6.05 TB  |
 
-<sup>**We will remove the video samples from our dataset / Github / project webpage / technical presentation as long as you need it. Please contact tsaishienchen at gmail dot com for the request.</sup>
-
 
 ## License of OpenHumanVid
 The video samples are collected from the publicly available dataset. Users must follow [the license](https://github.com/fudan-generative-vision/OpenHumanVid/blob/main/LICENSE) to use these video samples.  
